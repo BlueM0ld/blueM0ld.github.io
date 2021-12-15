@@ -7,8 +7,8 @@ window.onload = () => {
     if (window.navigator.geolocation) {
         // Geolocation available
         navigator.geolocation.getCurrentPosition(function(position) {
-            latUser = position.coords.latitude;
-            longUser = position.coords.longitude;
+            latUser = position.coords.latitude +2;
+            longUser = position.coords.longitude + 2;
         
     });
     }
@@ -32,7 +32,7 @@ function staticLoadPlaces(latUser,longUser) {
 var models = [
     {
         url: './assets/magnemite/scene.gltf',
-        scale: '0.2 0.2 0.2',
+        scale: '0.1 0.1 0.1',
     }
 ];
 
