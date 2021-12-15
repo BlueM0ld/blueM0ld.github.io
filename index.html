@@ -78,6 +78,7 @@ function ball_in_hoop() {
         document.querySelector('a-scene').appendChild(ball); 
         
         console.log("camera postiion ", document.querySelector('a-scene').camera.el.object3D.position)
+        console.log("hoop postiion ", document.querySelector('#middle').getAttribute("position"))
 }
 
 document.body.addEventListener('click', ball_in_hoop, true); 
