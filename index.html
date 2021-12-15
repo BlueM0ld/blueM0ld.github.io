@@ -17,6 +17,7 @@
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene 
+        anotherone
         vr-mode-ui='enabled: false' 
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
@@ -34,15 +35,13 @@
                 static-body
             ></a-plane>
         </a-entity>
-        <a-sphere id="ball" dynamic-body radius="0.1" color="blue" position="0.1 2.36 -1.5"></a-sphere>
+        <a-sphere id="ball" dynamic-body radius="0.1" color="orange" position="0.1 2.36 -1.5"></a-sphere>
     <a-camera gps-camera rotation-reader></a-camera>
 </a-scene>
 <script>
 
 function ball_in_hoop() {
-var scene = document.getElementsByTagName("a-scene");
-var balla = document.querySelector("#ball");
- AFRAME.registerComponent('scene', {
+ AFRAME.registerComponent('anotherone', {
     init: function () {
         // ballA.setAttribute('position', "0.1 2.36 -1.5");
         var ball = document.createElement("a-sphere");
