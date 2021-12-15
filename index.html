@@ -48,14 +48,8 @@ function ball_in_hoop() {
         ball.setAttribute("position", "0.1 2.36 -1.5");
         ball.setAttribute("dynamic-body");
         ball.setAttribute("color", "orange");
-        
+        document.querySelector('a-scene').appendChild(ball); 
 }
-// var ball = document.createElement("a-sphere");
-//         ball.setAttribute("id","ball")
-//         ball.setAttribute("radius", "0.1");
-//         ball.setAttribute("position", "0.1 2.36 -1.5");
-//         ball.setAttribute("dynamic-body");
-//         ball.setAttribute("color", "orange");
 
 document.body.addEventListener('click', ball_in_hoop, true); 
 
