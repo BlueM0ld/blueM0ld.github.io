@@ -25,6 +25,7 @@
             <a-torus scale="0.6 0.6 0.6" position="0 0.173 -0.1" color="#43A367" radius="0.25" radius-tubular="0.005"></a-torus>
             <a-torus scale="0.6 0.6 0.6" static-body="shape: mesh;" position="0 0.173 -0.1" visible="false" radius="0.27" radius-tubular="0.02" material="" geometry="radius: 0.29; segmentsRadial: 5; segmentsTubular: 12"></a-torus>
             <a-plane
+                id = "middle"
                 scale="0.6 0.6 0.6"
                 position="0 0 -0.3"
                 rotation="-90 0 0"
@@ -34,6 +35,32 @@
                 src="./hoop.png"
                 static-body
             ></a-plane>
+            <a-torus scale="0.6 0.6 0.6" position="1 0 -0.1" color="#43A367" radius="0.25" radius-tubular="0.005"></a-torus>
+            <a-torus scale="0.6 0.6 0.6" static-body="shape: mesh;" position="1 0 -0.1" visible="false" radius="0.27" radius-tubular="0.02" material="" geometry="radius: 0.29; segmentsRadial: 5; segmentsTubular: 12"></a-torus>
+            <a-plane
+                id = "right"
+                scale="0.6 0.6 0.6"
+                position="1 0 -0.3"
+                rotation="-90 0 0"
+                width="0.9"
+                height="0.9"
+                material="transparent: true; side: double;"
+                src="./righthoop.png"
+                static-body
+            ></a-plane>
+            <a-torus scale="0.6 0.6 0.6" position="-1 0 -0.1" color="#43A367" radius="0.25" radius-tubular="0.005"></a-torus>
+            <a-torus scale="0.6 0.6 0.6" static-body="shape: mesh;" position="-1 0 -0.1" rotation = "0 25 0" visible="false" radius="0.27" radius-tubular="0.02" material="" geometry="radius: 0.29; segmentsRadial: 5; segmentsTubular: 12"></a-torus>
+            <a-plane
+                id = "left"
+                scale="0.6 0.6 0.6"
+                position="-1 0 -0.3"
+                rotation="-90 0 0"
+                width="0.9"
+                height="0.9"
+                material="transparent: true; side: double;"
+                src="./lefthoop.png"
+                static-body
+            ></a-plane>           
         </a-entity>
         <a-sphere id="ball" dynamic-body radius="0.1" color="orange" position="0.1 2.36 -1.5"></a-sphere>
     <a-camera gps-camera rotation-reader></a-camera>
