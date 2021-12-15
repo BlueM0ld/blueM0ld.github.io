@@ -40,8 +40,15 @@
 <script>
 
 function ball_in_hoop() {
+var scene = document.getElementsByTagName("a-scene");
  AFRAME.registerComponent('ball', {
     init: function () {
+     var el = this.el;  // <a-box>
+      el.addEventListener("mouseenter", function () {
+      });
+      el.addEventListener("mouseleave", function () {
+      });
+      el.addEventListener("touchmove", function () {
         var ball = document.createElement("a-sphere");
         ball.setAttribute("id","ball")
         ball.setAttribute("radius", "0.1");
@@ -49,6 +56,8 @@ function ball_in_hoop() {
         ball.setAttribute("dynamic-body");
         ball.setAttribute("color", "orange");
     }
+      });
+
   });
 }
 
