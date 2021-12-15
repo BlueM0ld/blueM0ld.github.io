@@ -39,8 +39,22 @@
 </a-scene>
 <script>
 
+function ball_in_hoop(e) {
+				e.preventDefault();
+ AFRAME.registerComponent('ball', {
+    init: function () {
+        var ball = document.createElement("a-sphere");
+        ball.setAttribute("id","ball")
+        ball.setAttribute("radius", "0.1");
+        ball.setAttribute("position", "0.1 2.36 -1.5");
+        ball.setAttribute("dynamic-body");
+        ball.setAttribute("color", "orange");
+    }
+  });
+}
 
 
+el.addEventListener("touchmove", ball_in_hoop, false);
 </script>
 
 </body>
