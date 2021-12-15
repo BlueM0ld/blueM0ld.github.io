@@ -14,7 +14,22 @@
     <script src="./componet.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
 </head>
-
+<script>
+    AFRAME.registerComponent("trackball", {
+        tick: function() {
+            let pos = this.el.getAttribute("position");
+            document.body.addEventListener('click',()=>{
+              if (pos.y < 0.5) {
+                  // reset position
+                  this.el.setAttribute("position", "0.1 2.36 -1.5")
+                  // sync
+                  this.el.components["dynamic-body"].syncToPhysics();
+              }
+            }, true); 
+            
+        }
+        });
+</script>
 <body style='margin: 0; overflow: hidden;'>
     <a-scene 
         anotherone
@@ -62,27 +77,7 @@
                 static-body
             ></a-plane>           
         </a-entity>
-        <a-sphere id="ball" dynamic-body radius="0.1" color="orange" position="0.1 2.36 -1.5"></a-sphere>
+        <a-sphere id="ball" dynamic-body radius="0.1" color="orange" position="0.1 2.36 -1.5" trackball></a-sphere>
     <a-camera gps-camera rotation-reader></a-camera>
 </a-scene>
-<script>
-
-function ball_in_hoop() {
-
-        var ball = document.createElement("a-sphere");
-        ball.setAttribute("id","ballc")
-        ball.setAttribute("radius", "0.1");
-        ball.setAttribute("position", "0.1 2.36 -1.5");
-        ball.setAttribute("dynamic-body", "");
-        ball.setAttribute("color", "orange");
-        document.querySelector('a-scene').appendChild(ball); 
-        
-        console.log("camera postiion ", document.querySelector('a-scene').camera.el.object3D.position)
-        console.log("hoop postiion ", document.querySelector('#middle').getAttribute("position"))
-}
-
-document.body.addEventListener('click', ball_in_hoop, true); 
-
-</script>
-
 </body>
