@@ -14,7 +14,22 @@
     <script src="./componet.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
 </head>
-
+<script>
+    AFRAME.registerComponent("trackball", {
+        tick: function() {
+            let pos = this.el.getAttribute("position");
+            document.body.addEventListener('click',()=>{
+              if (pos.y < 0.5) {
+                  // reset position
+                  this.el.setAttribute("position", "0.1 2.36 -1.5")
+                  // sync
+                  this.el.components["dynamic-body"].syncToPhysics();
+              }
+            }, true); 
+            
+        }
+        });
+</script>
 <body style='margin: 0; overflow: hidden;'>
     <a-scene 
         anotherone
