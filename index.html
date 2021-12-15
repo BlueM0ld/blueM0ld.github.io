@@ -41,22 +41,11 @@
 
 function ball_in_hoop() {
 var scene = document.getElementsByTagName("a-scene");
- AFRAME.registerComponent('ball', {
+var ballA = document.querySelector("#ball");
+ AFRAME.registerComponent('ballA', {
     init: function () {
-     var el = this.el;  // <a-box>
-      el.addEventListener("mouseenter", function () {
-      });
-      el.addEventListener("mouseleave", function () {
-      });
-      el.addEventListener("click", function () {
-        var ball = document.createElement("a-sphere");
-        ball.setAttribute("id","ball")
-        ball.setAttribute("radius", "0.1");
-        ball.setAttribute("position", "0.1 2.36 -1.5");
-        ball.setAttribute("dynamic-body");
-        ball.setAttribute("color", "orange");
-      });
-  }
+        ballA.setAttribute('position', "0.1 2.36 -1.5");
+        }
     });
 }
 
