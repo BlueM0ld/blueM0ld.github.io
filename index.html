@@ -77,7 +77,7 @@ function ball_in_hoop() {
         ball.setAttribute("color", "orange");
         document.querySelector('a-scene').appendChild(ball); 
         
-        console.log("camera postiion ", document.querySelector('a-scene').camera.position)
+        console.log("camera postiion ", document.querySelector('a-scene').camera.el.object3D.position)
 }
 
 document.body.addEventListener('click', ball_in_hoop, true); 
