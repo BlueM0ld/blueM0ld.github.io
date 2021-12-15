@@ -41,17 +41,14 @@
 <script>
 
 function ball_in_hoop() {
- AFRAME.registerComponent('anotherone', {
-    init: function () {
-        // ballA.setAttribute('position', "0.1 2.36 -1.5");
+
         var ball = document.createElement("a-sphere");
         ball.setAttribute("id","ballc")
         ball.setAttribute("radius", "0.1");
         ball.setAttribute("position", "0.1 2.36 -1.5");
         ball.setAttribute("dynamic-body");
         ball.setAttribute("color", "orange");
-        }
-    });
+        
 }
 // var ball = document.createElement("a-sphere");
 //         ball.setAttribute("id","ball")
