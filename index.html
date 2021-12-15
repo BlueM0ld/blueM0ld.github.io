@@ -34,7 +34,7 @@
                 static-body
             ></a-plane>
         </a-entity>
-        <a-sphere id="ball" dynamic-body radius="0.1" color="green" position="0.1 2.36 -1.5"></a-sphere>
+        <a-sphere id="ball" dynamic-body radius="0.1" color="orange" position="0.1 2.36 -1.5"></a-sphere>
     <a-camera gps-camera rotation-reader></a-camera>
 </a-scene>
 <script>
@@ -50,7 +50,8 @@ var ballA = document.querySelector("#ball");
 }
 
 
-document.getElementsByTagName("a-scene").addEventListener('click', ball_in_hoop);
+document.body.addEventListener('click', ball_in_hoop, true); 
+
 </script>
 
 </body>
