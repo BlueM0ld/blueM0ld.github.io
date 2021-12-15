@@ -15,12 +15,11 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <div class="centered instructions"></div>
     <a-scene 
         vr-mode-ui='enabled: false' 
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-entity id="hoop" rotation="90 0 0" position="0 2 -1.8" hide-in-ar-mode> 
+        <a-entity id="hoop" rotation="90 0 0" position="0 2 -1.8"> 
             <a-torus scale="0.6 0.6 0.6" position="0 0.173 -0.1" color="#43A367" radius="0.25" radius-tubular="0.005"></a-torus>
             <a-torus scale="0.6 0.6 0.6" static-body="shape: mesh;" position="0 0.173 -0.1" visible="false" radius="0.27" radius-tubular="0.02" material="" geometry="radius: 0.29; segmentsRadial: 5; segmentsTubular: 12"></a-torus>
             <a-plane
@@ -36,7 +35,10 @@
         </a-entity>
     <a-camera gps-camera rotation-reader></a-camera>
 </a-scene>
-<div class="centered">
-    <button data-action="change"></button>
-</div>
+<script>
+
+
+
+</script>
+
 </body>
