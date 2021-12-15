@@ -36,7 +36,7 @@
         vr-mode-ui='enabled: false' 
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-entity id="hoop1" rotation="90 0 0" position="0 2 -1.8"   cursor-listener> 
+        <a-entity id="hoop1" rotation="90 0 0" position="0 2 -1.8"> 
             <a-torus scale="0.6 0.6 0.6" position="0 0.173 -0.1" color="#43A367" radius="0.25" radius-tubular="0.005"></a-torus>
             <a-torus scale="0.6 0.6 0.6" static-body="shape: mesh;" position="0 0.173 -0.1" visible="false" radius="0.27" radius-tubular="0.02" material="" geometry="radius: 0.29; segmentsRadial: 5; segmentsTubular: 12"></a-torus>
             <a-plane
@@ -51,11 +51,13 @@
                 cursor-listener
                 static-body>
                 <a-entity
+                id="question"
                 geometry="primitive: plane; width: 4; height: auto"
                 material="color: black"
                 text="value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
                 position = "0 1 0"></a-entity>
                 <a-entity
+                id="answer-2"
                 scale="4 4 2"
                 material="color: black"
                 text="value: Answer 2"
@@ -76,6 +78,7 @@
                 static-body
             >
             <a-entity
+                id="answer-3"
                 scale="4 4 2"
                 material="color: black"
                 text="value: Answer 3"
@@ -96,6 +99,7 @@
                 cursor-listener
             >
             <a-entity
+                id="answer-1"
                 scale="4 4 2"
                 material="color: black"
                 text="value: Answer 1"
