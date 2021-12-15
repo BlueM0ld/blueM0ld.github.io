@@ -33,7 +33,6 @@ var models = [
     {
         url: './assets/magnemite/scene.gltf',
         scale: '0.2 0.2 0.2',
-        info: 'Magnemite, Lv. 5, HP 10/10',
     }
 ];
 
@@ -64,15 +63,6 @@ function renderPlaces(places) {
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
         setModel(models[modelIndex], model);
-
-        model.setAttribute('animation-mixer', '');
-
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
-        });
 
         scene.appendChild(model);
     });
